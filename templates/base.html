@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!--<link rel="stylesheet" href="../static/style.css" type="text/css">--> 
+    <title>M Wong</title>
+
+  </head>
+  <body>
+    <div id='header'><h1>M Wong</h1>
+    <h3>My personal site</h3></div>
+    </div>
+
+     <div id="nav">
+     <a href="{{ url_for('home') }}"><b>Home</b></a> |
+    
+     <a href="{{ url_for('img') }}"><b>Photos</b></a> |
+     <a href="{{ url_for('privacy') }}"><b>Privacy</b></a>
+     </div>
+
+    <br />
+    <div id="content">{% block content %}{% endblock %}</div>
+
+</body>
+</html>
