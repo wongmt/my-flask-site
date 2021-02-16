@@ -10,7 +10,7 @@ def home():
     return render_template('home.html')
 
 @app.route("/privacy")
-def privacy():
+def myprivacy():
     return render_template('privacy.html')
 
 @app.route("/img")
