@@ -18,15 +18,9 @@ def myprivacy():
 def img():
     return render_template('img.html')
 
-#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///User.sqlite3'
 import os
 from flask_sqlalchemy import SQLAlchemy
-#import psycopg2
-#DATABASE_URL = os.environ['DATABASE_URL']
-#conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
-##
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']	
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
