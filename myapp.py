@@ -1,9 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template
 import sqlite3
 from datetime import datetime
 
 app = Flask(__name__)
-#app.config["DEBUG"] = False
 
 @app.route("/")
 def home():
@@ -19,4 +18,3 @@ def img():
     
 if __name__ == '__main__':
     app.run(debug=True)
-
