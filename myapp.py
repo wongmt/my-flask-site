@@ -1,5 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template
 import sqlite3
+
+import os
+from flask_sqlalchemy import SQLAlchemy
+import psycopg2
 
 app = Flask(__name__)
 app.config["DEBUG"] = False
@@ -18,15 +22,10 @@ def myprivacy():
 def img():
     return render_template('img.html')
 
-import os
-from flask_sqlalchemy import SQLAlchemy
-
-import psycopg2
-
 #DATABASE_URL = os.environ['DATABASE_URL']
 #conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']	
+#app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL	
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -47,15 +46,6 @@ class Post(db.Model):
 def blog():
     post_data = Post.query.all()
     return render_template("blog.html", post_data = post_data)
-    '''
-    cur = conn.cursor()
-    cur.execute('select * from blog;' )
-    #conn.commit()
-    #cur.close()
-    #conn.close()
-    for row in cur:
-        return(row)
-    '''
     
 if __name__=="__main__":
     app.run(debug=False)
