@@ -23,8 +23,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 import psycopg2
 
-DATABASE_URL = os.environ['DATABASE_URL']
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+#DATABASE_URL = os.environ['DATABASE_URL']
+#conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']	
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -45,8 +45,9 @@ class Post(db.Model):
         
 @app.route("/blog")
 def blog():
-    #post_data = Post.query.all()
-    #return render_template("blog.html", post_data = post_data)
+    post_data = Post.query.all()
+    return render_template("blog.html", post_data = post_data)
+    '''
     cur = conn.cursor()
     cur.execute('select * from blog;' )
     #conn.commit()
@@ -54,7 +55,7 @@ def blog():
     #conn.close()
     for row in cur:
         return(row)
-
+    '''
     
 if __name__=="__main__":
     app.run(debug=False)
