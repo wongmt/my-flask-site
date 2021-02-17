@@ -6,9 +6,6 @@ from flask_sqlalchemy import SQLAlchemy
 import psycopg2
 
 app = Flask(__name__)
-app.config["DEBUG"] = False
-
-app = Flask(__name__)
 
 @app.route("/")
 def home():
@@ -48,5 +45,5 @@ def blog():
     return render_template("blog.html", post_data = post_data)
     
 if __name__=="__main__":
-    app.run(debug=False)
+    app.run()
  
