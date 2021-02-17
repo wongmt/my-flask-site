@@ -21,7 +21,6 @@ def img():
 import os
 from flask_sqlalchemy import SQLAlchemy
 
-
 import psycopg2
 
 DATABASE_URL = os.environ['DATABASE_URL']
@@ -53,7 +52,7 @@ def blog():
     conn.commit()
     cur.close()
     conn.close()
-    return rows[0]
+    return 'finished'
     
 if __name__=="__main__":
     app.run(debug=False)
