@@ -49,10 +49,12 @@ def blog():
     #return render_template("blog.html", post_data = post_data)
     cur = conn.cursor()
     cur.execute('select * from blog;' )
-    conn.commit()
-    cur.close()
-    conn.close()
-    return 'finished'
+    #conn.commit()
+    #cur.close()
+    #conn.close()
+    for row in cur:
+        return(row)
+
     
 if __name__=="__main__":
     app.run(debug=False)
