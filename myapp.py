@@ -48,7 +48,7 @@ def blog():
     #post_data = Post.query.all()
     #return render_template("blog.html", post_data = post_data)
     cur = conn.cursor()
-    rows=cur.execute('select * from blog;' )
+    cur.execute('select * from blog;' )
     conn.commit()
     cur.close()
     conn.close()
