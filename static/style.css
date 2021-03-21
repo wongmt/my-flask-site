@@ -1,27 +1,23 @@
 #header {
-                    background-color: papayawhip;
-                    padding: 5px;
-                }
+            background-color: papayawhip;
+            padding: 5px;
+        }
 
-                body {
-                    font-family: Arial, sans-serif;
-                    /*font-size: 100%;*/
-                }
+body {
+        font-family: Arial, sans-serif;
+     }
 
-                #nav {
-                    background-color: floralwhite;
-                    /* font-size: 100%; */
-                    padding: 5px;
-                }
+#nav { 
+        background-color: floralwhite;
+        padding: 5px;
+     }
 
-                #notice { background-color: floralwhite;
-                            /* font-size: 90%; */
-                }
+#notice { background-color: floralwhite;
+        }
 
-                /* #nav a {
-                    text-decoration: none;
-                } */
-
-                /* #nav a:hover {
-                    color: #666;
+/* #nav a {
+             text-decoration: none;
+          } */
+/* #nav a:hover {
+                   color: #666;
                 } */
