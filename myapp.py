@@ -11,10 +11,6 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.route("/myprivacy")
-def myprivacy():
-    return render_template('privacy.html')
-
 @app.route("/img")
 def img():
     return('''
