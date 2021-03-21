@@ -17,13 +17,23 @@ def myprivacy():
 
 @app.route("/img")
 def img():
-    return render_template('img.html')
+    return('''
+    <a href="/">Return to home page</a>
+    <h1>Personal site of M Wong</h1>
+    <h2>Photos</h2>
+    <h3>Australian Catholic University, Strathfield campus</h3>
+    <img src="/static/acu4_flask.jpg">
+    <br><br>
 
-DATABASE_URL = os.environ['DATABASE_URL']
+    <h3>UTS Haymarket Building 5, University of Technology Sydney</h3>
+    <img src="/static/uts-bldg5.jpg">
+    ''')    
+
+#DATABASE_URL = os.environ['DATABASE_URL']
 
 #conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL	
+#app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL	
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
