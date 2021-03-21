@@ -20,6 +20,7 @@ def img():
     return render_template('img.html')
 
 DATABASE_URL = os.environ['DATABASE_URL']
+
 #conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL	
