@@ -2,8 +2,7 @@
 <html>
   <head>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <!--<link rel="stylesheet" href="../static/style.css" type="text/css">--> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
     <title>M Wong</title>
 
   </head>
@@ -17,9 +16,7 @@
      <a href="{{ url_for('img') }}"><b>Photos</b></a> |
 	 <a href="{{ url_for('blog') }}"><b>Blog</b></a>
      </div>
-
     <br />
     <div id="content">{% block content %}{% endblock %}</div>
-
 </body>
 </html>
