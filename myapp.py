@@ -14,7 +14,9 @@ def home():
 @app.route("/img")
 def img():
     return('''
-    <a href="/">Return to home page</a>
+    <a href="/">Home | </a>
+    <a href="/img">Photos | </a>
+    <a href="/blog">Blog</a>
     <h1>Personal site of M Wong</h1>
     <h2>Photos</h2>
     <h3>Australian Catholic University, Strathfield campus</h3>
@@ -23,6 +25,7 @@ def img():
 
     <h3>UTS Haymarket Building 5, University of Technology Sydney</h3>
     <img src="/static/uts-bldg5.jpg">
+    <br><br>
     ''')    
 
 DATABASE_URL = os.environ['DATABASE_URL']
