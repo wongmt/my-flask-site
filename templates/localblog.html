@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+	
+	<h1>Blog of M Wong</h1>		  	
+	  		{% for post in rows %}  		
+	  		Title: {{post[1]}}<br>
+			Date: {{post[3]}}<br>
+			{{post[2]}}<br><br>
+			{% endfor %}
+{% endblock %}
