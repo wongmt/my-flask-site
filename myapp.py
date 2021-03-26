@@ -13,7 +13,6 @@ def home():
 
 DATABASE_URL = os.environ['DATABASE_URL']
 
-#conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL	
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -55,6 +54,9 @@ def img():
     ''')  
 
 # access blog in local Windows PC
+# to run development server & access database file in local PC, comment out the 
+# 2 lines which contain DATABASE_URL in this file. The local database file is 
+# reserved to be used by the site author only 
 @app.route("/localblog")
 def localblog():
     DATABASE = 'db1' # db1 is database file in local PC
