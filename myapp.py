@@ -56,7 +56,7 @@ def img():
 
 # access blog in local Windows PC
 @app.route("/localblog")
-def locblog():
+def localblog():
     DATABASE = 'db1' # db1 is database file in local PC
     con = sqlite3.connect(DATABASE)
     #con.row_factory = sqlite3.Row
